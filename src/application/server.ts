@@ -3,7 +3,7 @@ import helmet from 'helmet'
 import cors from 'cors'
 
 import apiRoutes from './http/routes/api'
-import { handleHttpError } from './http/ErrorHandlers/handleHttpError'
+import { handleHttpError } from './http/errorHandlers/handleHttpError'
 
 const app = express()
 
