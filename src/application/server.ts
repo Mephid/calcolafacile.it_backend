@@ -7,7 +7,14 @@ import { handleHttpError } from './http/errorHandlers/handleHttpError'
 
 const app = express()
 
-app.use(cors({ origin: 'https://www.calcolafacile.it' }))
+app.use(
+    cors({
+        origin:
+            process.env.NODE_ENV === 'development'
+                ? 'http://localhost:3000'
+                : 'https://www.calcolafacile.it',
+    })
+)
 
 app.use(helmet())
 
