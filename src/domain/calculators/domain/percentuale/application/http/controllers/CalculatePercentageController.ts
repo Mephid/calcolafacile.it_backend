@@ -5,7 +5,7 @@ export class CalculatePercentageController {
     constructor(private useCase: ICalculatePercentage) {}
 
     execute = (req: express.Request, res: express.Response): void => {
-        const { part, whole } = req.body.payload
+        const { part, whole } = req.body
 
         const result = this.useCase.execute({ part, whole })
 

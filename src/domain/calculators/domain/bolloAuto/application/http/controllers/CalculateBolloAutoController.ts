@@ -5,7 +5,7 @@ export class CalculateBolloAutoController {
     constructor(private useCase: ICalculateBolloAuto) {}
 
     execute = (req: express.Request, res: express.Response): void => {
-        const { unit, euroCategory, power, region } = req.body.payload
+        const { unit, euroCategory, power, region } = req.body
 
         const result = this.useCase.execute({
             unit,

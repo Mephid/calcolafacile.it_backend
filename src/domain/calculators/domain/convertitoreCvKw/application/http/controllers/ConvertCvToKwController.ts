@@ -5,7 +5,7 @@ export class ConvertCvToKwController {
     constructor(private useCase: IConvertCvToKw) {}
 
     execute = (req: express.Request, res: express.Response): void => {
-        const { cv } = req.body.payload
+        const { cv } = req.body
 
         const result = this.useCase.execute({ cv })
 

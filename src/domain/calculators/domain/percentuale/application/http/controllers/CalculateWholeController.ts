@@ -5,7 +5,7 @@ export class CalculateWholeController {
     constructor(private useCase: ICalculateWhole) {}
 
     execute = (req: express.Request, res: express.Response): void => {
-        const { part, perc } = req.body.payload
+        const { part, perc } = req.body
 
         const result = this.useCase.execute({ part, perc })
 

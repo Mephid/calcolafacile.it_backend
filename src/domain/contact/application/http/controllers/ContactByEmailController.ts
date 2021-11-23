@@ -9,7 +9,7 @@ export class ContactByEmailController {
         res: express.Response,
         next: express.NextFunction
     ): Promise<void> => {
-        const { content, senderEmail, subject, senderName } = req.body.payload
+        const { content, senderEmail, subject, senderName } = req.body
 
         try {
             await this.useCase.execute({

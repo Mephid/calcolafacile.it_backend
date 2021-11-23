@@ -4,7 +4,7 @@ import { Region } from '../../../core/enums/Region'
 import { Unit } from '../../../core/enums/Unit'
 
 export const calculateBolloAutoValidator = expressValidator({
-    'payload.unit': {
+    unit: {
         in: ['body'],
         custom: {
             options: (value) => {
@@ -12,7 +12,7 @@ export const calculateBolloAutoValidator = expressValidator({
             },
         },
     },
-    'payload.euroCategory': {
+    euroCategory: {
         in: ['body'],
         custom: {
             options: (value) => {
@@ -20,13 +20,13 @@ export const calculateBolloAutoValidator = expressValidator({
             },
         },
     },
-    'payload.power': {
+    power: {
         in: ['body'],
         isInt: {
             options: { gt: 0 },
         },
     },
-    'payload.region': {
+    region: {
         in: ['body'],
         custom: {
             options: (value) => {
