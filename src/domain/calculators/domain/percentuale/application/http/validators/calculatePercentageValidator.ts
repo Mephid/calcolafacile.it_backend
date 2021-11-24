@@ -3,14 +3,10 @@ import { expressValidator } from '../../../../../../shared/infrastructure/http/v
 export const calculatePercentageValidator = expressValidator({
     part: {
         in: ['body'],
-        isInt: {
-            options: { gt: 0 },
-        },
+        isNumeric: true,
     },
     whole: {
         in: ['body'],
-        isInt: {
-            options: { gt: 0 },
-        },
+        isNumeric: true,
     },
 })
