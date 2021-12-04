@@ -1,7 +1,5 @@
-import { ConvertCvToKw } from '../core/useCases/ConvertCvToKw'
-import { ConvertKwToCv } from '../core/useCases/ConvertKwToCv'
+import { ConvertCvKw } from '../core/useCases/ConvertCvKw'
 
-const convertCvToKw = new ConvertCvToKw()
-const convertKwToCv = new ConvertKwToCv()
+const convertCvKw = new ConvertCvKw()
 
-export default { convertKwToCv, convertCvToKw }
+export default { convertCvKw }

@@ -2,21 +2,14 @@ import { Router } from 'express'
 
 import controller from '../../../DI/controllers'
 
-import { convertCvToKwValidator } from '../validators/convertCvToKwValidator'
-import { convertKwToCvValidator } from '../validators/convertKwToCvValidator'
+import { convertCvKwValidator } from '../validators/convertCvKwValidator'
 
 const router = Router()
 
 router.post(
-    '/kw-to-cv',
-    ...convertKwToCvValidator,
-    controller.convertKwToCvController.execute
-)
-
-router.post(
-    '/cv-to-kw',
-    ...convertCvToKwValidator,
-    controller.convertCvToKwController.execute
+    'cv-kw-converter',
+    ...convertCvKwValidator,
+    controller.convertKwCvController.execute
 )
 
 export default router

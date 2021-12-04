@@ -40,7 +40,7 @@ export class CalculateBolloAuto implements ICalculateBolloAuto {
 
     private getConvertedPower(unit: Unit, power: number): number {
         return unit === Unit.CV
-            ? this.cvKwConverter.convertCvToKw(power)
+            ? this.cvKwConverter.convertCvKw(unit, power.toString())
             : power
     }
 

@@ -1,13 +1,9 @@
-import { ConvertCvToKwController } from '../application/http/controllers/ConvertCvToKwController'
-import { ConvertKwToCvController } from '../application/http/controllers/ConvertKwToCvController'
+import { ConvertCvKwController } from '../application/http/controllers/ConvertCvKwController'
 
 import useCase from './useCases'
 
-const convertCvToKwController = new ConvertCvToKwController(
-    useCase.convertCvToKw
-)
-const convertKwToCvController = new ConvertKwToCvController(
-    useCase.convertKwToCv
-)
+const convertKwCvController = new ConvertCvKwController(useCase.convertCvKw)
 
-export default { convertCvToKwController, convertKwToCvController }
+export default {
+    convertKwCvController,
+}

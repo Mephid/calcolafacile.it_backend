@@ -1,9 +1,12 @@
 import { convertitoreCvKwService } from '../../convertitoreCvKw/convertitoreCvKwService'
 
 export class CvKwModuleAdapter {
-    public convertCvToKw(cv: number): number {
-        const response = convertitoreCvKwService.convertCvToKw.execute({ cv })
+    public convertCvKw(powerUnit: string, powerValue: string): number {
+        const response = convertitoreCvKwService.convertCvKw.execute({
+            powerUnit,
+            powerValue,
+        })
 
-        return response.kw
+        return response.convertedValue
     }
 }

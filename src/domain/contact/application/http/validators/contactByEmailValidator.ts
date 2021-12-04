@@ -11,7 +11,7 @@ export const contactByEmailValidator = expressValidator({
     subject: {
         in: ['body'],
         trim: true,
-        notEmpty: { bail: true },
+        optional: true,
         isString: true,
         escape: true,
     },
@@ -26,7 +26,6 @@ export const contactByEmailValidator = expressValidator({
         in: ['body'],
         trim: true,
         optional: true,
-        notEmpty: { bail: true },
         isString: true,
         escape: true,
     },

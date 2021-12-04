@@ -1,3 +1,3 @@
 export interface ICvKwModuleAdapter {
-    convertCvToKw(cv: number): number
+    convertCvKw(powerValue: string, powerUnit: string): number
 }
