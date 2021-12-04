@@ -3,7 +3,7 @@ import { expressValidator } from '../../../../../../shared/infrastructure/http/v
 export const convertCvKwValidator = expressValidator({
     powerUnit: {
         in: ['body'],
-        isIn: { options: ['CV', 'kW'] },
+        isIn: { options: [['kW', 'CV']] },
     },
     powerValue: {
         in: ['body'],

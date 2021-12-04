@@ -7,7 +7,7 @@ import { convertCvKwValidator } from '../validators/convertCvKwValidator'
 const router = Router()
 
 router.post(
-    'cv-kw-converter',
+    '/cv-kw-converter',
     ...convertCvKwValidator,
     controller.convertKwCvController.execute
 )
