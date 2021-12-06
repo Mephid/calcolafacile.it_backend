@@ -12,14 +12,19 @@ export interface ConvertCvKwOutputModel {
 
 export class ConvertCvKw implements IConvertCvKw {
     private calculateResult(converter: CvKwConverter, unit: string): number {
-        let result = 0
+        let result: number
 
-        if (unit === 'CV') {
-            result = converter.convertValueToKw()
-        } else if (unit === 'kW') {
-            result = converter.convertValueToCv()
-        } else {
-            throw new Error('Wrong value provided.')
+        switch (unit) {
+            case 'CV':
+                result = converter.convertValueToKw()
+                break
+
+            case 'kW':
+                result = converter.convertValueToCv()
+                break
+
+            default:
+                throw new Error('Wrong value provided.')
         }
 
         return result
