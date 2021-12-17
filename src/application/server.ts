@@ -2,8 +2,8 @@ import express from 'express'
 import helmet from 'helmet'
 import cors from 'cors'
 
+import handleHttpError from './http/handlers/handleHttpError'
 import apiRoutes from './http/routes/api'
-import handleHttpError from './http/errorHandlers/handleHttpError'
 
 const app = express()
 const PORT = process.env.PORT || 5000
