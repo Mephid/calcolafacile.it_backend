@@ -5,7 +5,7 @@
     "main": "./src/application/server.ts",
     "scripts": {
         "start": "node dist/application/server.js",
-        "postinstall": "tsc",
+        "build": "tsc",
         "dev:server": "nodemon --config nodemon.json src/application/server.ts",
         "test": "jest --watch --setupFiles dotenv/config"
     },
