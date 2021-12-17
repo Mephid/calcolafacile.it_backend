@@ -5,6 +5,8 @@ import cors from 'cors'
 import apiRoutes from './http/routes/api'
 import { handleHttpError } from './http/errorHandlers/handleHttpError'
 
+const PORT = process.env.PORT || 5000
+
 const app = express()
 
 app.use(
@@ -24,6 +26,6 @@ app.use([apiRoutes])
 
 app.use(handleHttpError)
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
     console.log(`Server listening on port ${process.env.PORT}`)
 })
