@@ -2,7 +2,7 @@ import express from 'express'
 
 import { BaseHttpException } from '../BaseHttpException'
 
-export const handleHttpError = (
+const handleHttpError = (
     error: BaseHttpException,
     req: express.Request,
     res: express.Response,
@@ -15,3 +15,5 @@ export const handleHttpError = (
         message,
     })
 }
+
+export default handleHttpError
