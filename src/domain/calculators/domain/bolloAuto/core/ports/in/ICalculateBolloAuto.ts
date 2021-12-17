@@ -1,8 +1,10 @@
 import {
-    InputModel,
-    OutputModel,
+    CalculateBolloAutoInputModel,
+    CalculateBolloAutoOutputModel,
 } from '../../useCases/CalculateBolloAuto/CalculateBolloAuto'
 
 export interface ICalculateBolloAuto {
-    execute(payload: InputModel): OutputModel
+    execute(
+        payload: CalculateBolloAutoInputModel
+    ): CalculateBolloAutoOutputModel
 }
