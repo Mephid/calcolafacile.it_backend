@@ -4,6 +4,7 @@
     "description": "",
     "main": "./src/application/server.ts",
     "scripts": {
+        "start": "node src/application/server.ts",
         "dev:server": "nodemon --config nodemon.json src/application/server.ts",
         "test": "jest --watch --setupFiles dotenv/config"
     },
