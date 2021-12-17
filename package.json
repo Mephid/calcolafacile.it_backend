@@ -4,7 +4,7 @@
     "description": "",
     "main": "./src/application/server.ts",
     "scripts": {
-        "start": "tsc && node dist/server.js",
+        "start": "tsc && node dist/application/server.js",
         "dev:server": "nodemon --config nodemon.json src/application/server.ts",
         "test": "jest --watch --setupFiles dotenv/config"
     },
