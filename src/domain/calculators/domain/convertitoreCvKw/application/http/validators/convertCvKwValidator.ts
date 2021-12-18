@@ -1,4 +1,5 @@
-import { expressValidator } from '../../../../../../shared/infrastructure/http/validators/expressValidator'
+import toDottedFloat from '../../../../../../shared/infrastructure/http/express-sanitizers/toDottedFloat'
+import { expressValidator } from '../../../../../../shared/infrastructure/http/express-validators/expressValidator'
 
 export const convertCvKwValidator = expressValidator({
     powerUnit: {
@@ -7,8 +8,6 @@ export const convertCvKwValidator = expressValidator({
     },
     powerValue: {
         in: ['body'],
-        isInt: {
-            options: { gt: 0 },
-        },
+        isNumeric: true,
     },
 })

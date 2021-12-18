@@ -1,4 +1,4 @@
-import { expressValidator } from '../../../../../../shared/infrastructure/http/validators/expressValidator'
+import { expressValidator } from '../../../../../../shared/infrastructure/http/express-validators/expressValidator'
 
 export const calculatePercentageValidator = expressValidator({
     part: {

@@ -1,4 +1,4 @@
-import { expressValidator } from '../../../../../../shared/infrastructure/http/validators/expressValidator'
+import { expressValidator } from '../../../../../../shared/infrastructure/http/express-validators/expressValidator'
 import { EuroCategory } from '../../../core/enums/EuroCategory'
 import { Region } from '../../../core/enums/Region'
 import { Unit } from '../../../core/enums/Unit'
@@ -22,9 +22,7 @@ export const calculateBolloAutoValidator = expressValidator({
     },
     power: {
         in: ['body'],
-        isInt: {
-            options: { gt: 0 },
-        },
+        isNumeric: true,
     },
     region: {
         in: ['body'],

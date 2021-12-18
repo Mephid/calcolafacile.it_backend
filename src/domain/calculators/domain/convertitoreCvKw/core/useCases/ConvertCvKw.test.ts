@@ -10,4 +10,12 @@ describe('Convert CV to KW', () => {
         })
         expect(convertedCv.convertedValue).toBeCloseTo(0.73, 1)
     })
+
+    it('should convert KW to CV', () => {
+        const convertedCv = convertCvKw.execute({
+            powerValue: '0.73',
+            powerUnit: 'kW',
+        })
+        expect(convertedCv.convertedValue).toBeCloseTo(1, 1)
+    })
 })
